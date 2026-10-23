@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-24",
+  "revision": "articulated-swim-v2",
+  "unitTests": 32,
+  "unitPassed": 32,
+  "journeys": [
+    {
+      "seed": 73,
+      "result": "victory",
+      "seconds": 961.3999999994543,
+      "eaten": 718,
+      "score": 37932,
+      "damage": 288,
+      "trace": [
+        "区域 1 @ 0.0s",
+        "成长 1 @ 0.0s",
+        "成长 2 @ 292.4s",
+        "成长 3 @ 484.5s",
+        "区域 2 @ 556.9s",
+        "成长 4 @ 658.8s",
+        "区域 3 @ 736.5s",
+        "成长 5 @ 888.9s"
+      ]
+    },
+    {
+      "seed": 207,
+      "result": "victory",
+      "seconds": 906.2666666661711,
+      "eaten": 643,
+      "score": 38512,
+      "damage": 318,
+      "trace": [
+        "区域 1 @ 0.0s",
+        "成长 1 @ 0.0s",
+        "成长 2 @ 215.8s",
+        "成长 3 @ 417.1s",
+        "区域 2 @ 520.6s",
+        "成长 4 @ 631.4s",
+        "区域 3 @ 692.1s",
+        "成长 5 @ 831.5s"
+      ]
+    },
+    {
+      "seed": 2026,
+      "result": "victory",
+      "seconds": 920.2666666661584,
+      "eaten": 607,
+      "score": 39504,
+      "damage": 112,
+      "trace": [
+        "区域 1 @ 0.0s",
+        "成长 1 @ 0.0s",
+        "成长 2 @ 263.8s",
+        "成长 3 @ 525.7s",
+        "区域 2 @ 570.2s",
+        "成长 4 @ 680.5s",
+        "区域 3 @ 745.9s",
+        "成长 5 @ 843.2s"
+      ]
+    }
+  ],
+  "endurance": {
+    "passed": true,
+    "simulatedMinutes": 30.00066666664905,
+    "waves": 20,
+    "aliveFish": 323,
+    "maxPopulation": 329,
+    "playerHealth": 100,
+    "wallSeconds": 21.307578699999997
+  },
+  "enduranceRun": "prior-acceptance",
+  "browserMotion": {
+    "desktop": "1440x900",
+    "phone": "844x390",
+    "tablet": "1024x768",
+    "portrait": "390x844",
+    "caughtViaJoystick": 34,
+    "consoleErrors": 0
+  }
+}

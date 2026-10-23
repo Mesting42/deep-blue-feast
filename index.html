@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1"
+    />
+    <meta name="theme-color" content="#062e43" />
+    <meta
+      name="description"
+      content="潜入晨光下的珊瑚湾。从一尾小鱼开始，在深蓝海洋里捕食、探索、进化，开启属于你的海域旅程。"
+    />
+    <title>深蓝食界 · 向更深处生长</title>
+    <link rel="icon" type="image/svg+xml" href="/mark.svg" />
+  </head>
+  <body>
+    <canvas id="ocean" aria-label="侧视海洋游戏画面"></canvas>
+    <main id="app"></main>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <div id="orientation">
+      <div class="rotate-device"></div>
+      <h2>转个方向，海阔天空</h2>
+      <p>请将设备横过来，继续你的海域旅程。</p>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
