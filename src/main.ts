@@ -17,6 +17,9 @@ const ui = new UI(document.getElementById('app')!, storage, input, audio, render
 let game: Game | null = null,
   last = performance.now();
 const clock = new FixedStepClock();
+// Match control visibility: an iframe width cannot identify a touch device.
+const touchPointer = matchMedia('(pointer: coarse)');
+const portraitTouch = () => touchPointer.matches && innerHeight > innerWidth;
 ui.onGame = (g) => {
   game = g;
   renderer.setGame(g);
@@ -26,7 +29,7 @@ ui.onGame = (g) => {
 function frame(now: number) {
   const elapsed = Math.min(0.08, (now - last) / 1000);
   last = now;
-  const portrait = innerHeight > innerWidth && innerWidth <= 1100;
+  const portrait = portraitTouch();
   if (portrait && game?.screen === 'playing') ui.pause(true);
   let controls: InputFrame | null = null;
   if (game) game.spawnView = renderer.spawnBounds();
@@ -58,7 +61,7 @@ document.addEventListener('visibilitychange', () => {
   clock.reset();
 });
 window.addEventListener('resize', () => {
-  if (innerHeight > innerWidth && innerWidth <= 1100) ui.pause(true);
+  if (portraitTouch()) ui.pause(true);
 });
 requestAnimationFrame(frame);
 // 生产构建预缓存全部本地资源；开发模式不注册，避免热更新被旧缓存干扰。

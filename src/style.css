@@ -1757,13 +1757,7 @@ kbd {
   }
 }
 @media (pointer: coarse), (max-width: 1100px) {
-  .touch-controls {
-    display: block;
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    opacity: var(--joy-opacity);
-  }
+
   #joystick {
     position: absolute;
     left: max(34px, env(safe-area-inset-left));
@@ -1910,9 +1904,7 @@ kbd {
     mask: radial-gradient(circle, transparent 66%, #000 68%);
     pointer-events: none;
   }
-  .desktop-actions {
-    display: none;
-  }
+
   .hud-bottom {
     left: 200px;
     right: 258px;
@@ -2720,9 +2712,7 @@ kbd {
   }
 }
 @media (orientation: portrait) and (max-width: 1100px) {
-  #orientation {
-    display: flex;
-  }
+
   .menu-hero {
     top: 25%;
     left: 10%;
@@ -2843,3 +2833,21 @@ kbd {
   .other-modes { margin-top: 8px; }
   .how-link { margin-top: 8px; }
 }
+
+/* Input UI follows the primary pointer, never the width of an embedded frame.
+   The responsive layout above still adapts to narrow desktop windows. */
+@media (pointer: coarse) {
+  .touch-controls {
+    display: block;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: var(--joy-opacity);
+  }
+  .desktop-actions {
+    display: none;
+  }
+}
+
+/* Rotation guidance is relevant to touch play, not a narrow mouse window. */
+@media (orientation: portrait) and (pointer: coarse) { #orientation { display:flex; } }
