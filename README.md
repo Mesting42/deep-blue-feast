@@ -109,3 +109,14 @@ npm run build
 `release/深蓝食界-源码.zip` 包含源码、原始插画、压缩素材、配置、测试和交接文档，不打包 `node_modules`。解压后运行 `npm ci` 安装依赖。
 
 `release/深蓝食界-静态网页.zip` 包含 `dist/` 的全部可部署文件。解压后的 `index.html` 应位于静态站点根目录；使用 HTTP / HTTPS 服务访问。
+
+<!-- pixel-pier-game-listing:start -->
+## Game listing / 游戏展示
+
+- **Game developer / 游戏开发者:** Mest ([@Mesting42](https://github.com/Mesting42))
+- **Pixel Pier listing / 游戏展示页面:** [Deep Blue Feast](https://riverglint.link/games/deep-blue-feast/)
+
+This game is listed on Pixel Pier with a play entry and game guide. This link identifies a game-development and listing relationship; it does not identify the developer as the website operator or operating entity.
+
+本游戏在 Pixel Pier 展示，并提供游玩入口与游戏指南。此链接仅表示游戏开发与展示关联，不代表开发者是该网站的运营者或运营主体。
+<!-- pixel-pier-game-listing:end -->
