@@ -2819,3 +2819,16 @@ kbd {
 .has-overlay #toast {
   opacity: 0;
 }
+
+/* A host player reserves space for its toolbar: tablet frames can be only
+   520–760px tall. Keep secondary mode actions above the fixed menu footer. */
+@media (min-height: 521px) and (max-height: 760px) and (orientation: landscape) {
+  .menu-hero { top: 18%; }
+  .menu-hero h1 { font-size: 60px; }
+  .menu-hero .eyebrow { margin-bottom: 10px; }
+  .hero-subtitle { margin-top: 8px; font-size: 16px; }
+  .hero-copy { margin-top: 12px; line-height: 1.8; }
+  .menu-buttons { margin-top: 18px; gap: 8px; }
+  .other-modes { margin-top: 12px; }
+  .how-link { margin-top: 10px; }
+}
