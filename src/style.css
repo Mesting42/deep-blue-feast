@@ -2832,3 +2832,14 @@ kbd {
   .other-modes { margin-top: 12px; }
   .how-link { margin-top: 10px; }
 }
+
+/* Embedded phone players can be shorter than the standalone browser viewport.
+   Preserve every menu action while trimming decorative copy and title height. */
+@media (max-height: 400px) and (orientation: landscape) {
+  .menu-hero { top: 62px; }
+  .menu-hero h1 { font-size: 38px; }
+  .menu-hero .eyebrow, .hero-subtitle, .button-note { display: none; }
+  .menu-buttons { margin-top: 12px; }
+  .other-modes { margin-top: 8px; }
+  .how-link { margin-top: 8px; }
+}
